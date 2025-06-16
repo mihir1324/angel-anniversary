@@ -1,26 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy 4th Anniversary</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy 4th Anniversary Angel 💖</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="ribbon" onclick="cutRibbon()">✂️ Click to Cut Ribbon</div>
-    <div class="cloud-text" style="display:none;">🐱 Happy 4th Anniversary, my Angel!</div>
-    <div class="balloons" style="display:none;">🎈🎈🎈</div>
-    <div class="letter" style="display:none;">
-        <p>My love, I never imagined someone would mean this much to me...</p>
-    </div>
-    <div class="comic" style="display:none;">
-        <img src="images/comic1.png" alt="Comic 1">
-        <img src="images/comic2.png" alt="Comic 2">
-        <img src="images/comic3.png" alt="Comic 3">
-        <img src="images/comic4.png" alt="Comic 4">
-    </div>
-    <audio id="bgMusic" src="music/bg.mp3" loop autoplay></audio>
-    <script src="script.js"></script>
+  <!-- 🎀 Ribbon Button -->
+  <div class="ribbon-wrapper">
+    <button id="ribbonCutBtn">🎀 Cut the Ribbon</button>
+  </div>
+
+  <!-- 🐱 Cat on Cloud -->
+  <div id="catMessage" class="hidden">
+    <p>🐱 Happy 4th Anniversary, My Angel! ☁️</p>
+  </div>
+
+  <!-- 🎈 Balloons -->
+  <div class="balloons" id="balloons">
+    <div class="balloon red"></div>
+    <div class="balloon blue"></div>
+    <div class="balloon green"></div>
+  </div>
+
+  <!-- 💌 Love Letter -->
+  <div id="loveLetter" class="hidden">
+    <h2>To My Angel 💌</h2>
+    <p>You brought the kind of love I thought never existed. Your smile, your soul, your support — they’ve become my world. I promise to always be yours. Forever yours, Mihir 💖</p>
+  </div>
+
+  <!-- 👼 Angel's Picture -->
+  <div id="angelPic" class="hidden">
+    <img src="images/angel.png" alt="My Angel"/>
+    <p class="caption">My Angel — Forever Yours, Mihir</p>
+  </div>
+
+  <!-- 🎵 Background Music -->
+  <audio autoplay loop>
+    <source src="music/bg.mp3" type="audio/mp3">
+  </audio>
 </body>
 </html>
+
