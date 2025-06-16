@@ -1,101 +1,21 @@
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to top right, #ffe6f0, #fffafc);
-  text-align: center;
-  overflow-x: hidden;
+  margin: 0; text-align: center;
+  background: #fff0f5; font-family: sans-serif;
 }
+.hidden { display: none; }
+.ribbon-wrapper { margin-top:50px; }
+#ribbonLine { width:80%; height:4px; background:red; margin:auto; transition: width 1s; }
+#ribbonCutBtn { padding:12px; font-size:18px; }
 
-.ribbon-wrapper {
-  margin-top: 50px;
-  position: relative;
-}
+#catCloud img { width:120px; animation: float 4s infinite; margin-top:20px; }
+.balloons { display:flex; justify-content:center; margin-top:20px; }
+.balloon { width:50px;height:70px;border-radius:50%;animation: float 3s infinite;margin:0 10px;}
+.red{background:red;} .blue{background:blue;} .green{background:green;}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-15px);} }
 
-#ribbonLine {
-  width: 80%;
-  height: 4px;
-  background: red;
-  margin: auto;
-  margin-bottom: 20px;
-  position: relative;
-  transition: width 0.5s ease-out;
-}
+#loveLetter, #angelPic, #comic { margin:20px auto; max-width:90%; }
+#angelPic img { width:200px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.2); }
+.panel { display:inline-block; margin:5px; }
 
-#ribbonCutBtn {
-  padding: 14px 28px;
-  font-size: 20px;
-  background: pink;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-}
-
-#catMessage {
-  margin-top: 30px;
-  font-size: 24px;
-  animation: float 4s infinite ease-in-out;
-}
-
-.balloons {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.balloon {
-  width: 50px;
-  height: 70px;
-  border-radius: 50%;
-  position: relative;
-  animation: float 3s ease-in-out infinite;
-}
-
-.red { background: red; }
-.blue { background: blue; }
-.green { background: green; }
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-.hidden {
-  display: none;
-}
-
-#loveLetter {
-  margin: 30px auto;
-  width: 80%;
-  font-size: 20px;
-  background: #fff0f5;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  animation: fadeIn 1s ease forwards;
-}
-
-#angelPic {
-  margin-top: 30px;
-  animation: fadeIn 2s ease forwards;
-}
-
-#angelPic img {
-  max-width: 250px;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-}
-
-.caption {
-  font-size: 16px;
-  color: #444;
-  margin-top: 8px;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
 
