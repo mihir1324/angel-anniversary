@@ -1,29 +1,30 @@
-document.addEventListener("DOMContentLoaded", function() {
-  // Get elements from the page
-  const ribbonCutBtn = document.getElementById("ribbonCutBtn");
-  const catMessage   = document.getElementById("catMessage");
-  const loveLetter   = document.getElementById("loveLetter");
-  const angelPic     = document.getElementById("angelPic");
-  const balloons     = document.getElementById("balloons");
+document.getElementById("ribbonCutBtn").addEventListener("click", () => {
+  const sound = new Audio("https://www.soundjay.com/button/sounds/button-4.mp3");
+  sound.play();
 
-  // When the ribbon is cut (button clicked)
-  ribbonCutBtn.addEventListener("click", function() {
-    // Hide the ribbon button
-    ribbonCutBtn.style.display = "none";
+  // Ribbon animation
+  const ribbon = document.getElementById("ribbonLine");
+  ribbon.style.width = "0";
+  ribbon.style.transition = "width 1s ease-out";
 
-    // Show cat message and balloons immediately
-    catMessage.classList.remove("hidden");
-    balloons.classList.remove("hidden");
+  // Hide button
+  document.getElementById("ribbonCutBtn").style.display = "none";
 
-    // After 30 seconds, show the love letter
-    setTimeout(function() {
-      loveLetter.classList.remove("hidden");
-    }, 30000); // 30000 milliseconds = 30 sec
+  // Show cloud message
+  setTimeout(() => {
+    document.getElementById("catMessage").classList.remove("hidden");
+    document.getElementById("balloons").classList.remove("hidden");
+  }, 1200);
 
-    // After 40 seconds, show Angel's picture with her caption
-    setTimeout(function() {
-      angelPic.classList.remove("hidden");
-    }, 40000); // 40000 milliseconds = 40 sec
-  });
+  // Show love letter
+  setTimeout(() => {
+    document.getElementById("loveLetter").classList.remove("hidden");
+  }, 2500);
+
+  // Show angel pic
+  setTimeout(() => {
+    document.getElementById("angelPic").classList.remove("hidden");
+  }, 5500);
 });
+
 
